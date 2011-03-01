@@ -1,0 +1,1 @@
+lib/MooseX/ChainedAccessors.pm
