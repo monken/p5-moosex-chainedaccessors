@@ -1,18 +1,16 @@
 package MooseX::Traits::Attribute::Chained;
+#ABSTRACT: Create method chaining attributes
 use Moose::Role;
 use MooseX::ChainedAccessors::Accessor;
+use MooseX::ChainedAccessors;
 
-sub accessor_metaclass { 'MooseX::ChainedAccessors::Accessor' }
+sub accessor_metaclass { $Moose::VERSION >= 1.9900 ? 'MooseX::ChainedAccessors' : 'MooseX::ChainedAccessors::Accessor' }
 
 no Moose::Role;
 1;
 
 
 __END__
-
-=head1 NAME
-
-MooseX::Traits::Attribute::Chained - Create method chaining attributes
 
 =head1 SYNOPSIS
 
@@ -25,18 +23,5 @@ MooseX::Traits::Attribute::Chained - Create method chaining attributes
 =head1 DESCRIPTION
 
 Modifies the Accessor Metaclass to use MooseX::ChainedAccessors::Accessor
-
-=head1 AUTHORS
-
-Moritz Onken E<lt>onken@netcubed.deE<gt>
-
-David McLaughlin E<lt>david@dmclaughlin.comE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright 2009 David McLaughlin
-
-This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
-
 
 
