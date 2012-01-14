@@ -1,3 +1,16 @@
+1.0.1 - 2012-01-14
+   - documentation
+
+1.0.0 - 2012-01-14
+   - DEPRECATION:
+     Implicit use of the Chained trait is deprecated.Please load
+     MooseX::Attribute::Chained explicitly before using the Chained trait
+
+   - massive rewrite
+   - moved MooseX::ChainedAccessors to MooseX::Attribute::Chained
+   - added MooseX::Attribute::ChainedClone
+   - deprecated implicit loading of the Chained trait
+
 0.02 - 2011-03-01
   - Moose 2 compatible
   - fixed problems with 1.x
