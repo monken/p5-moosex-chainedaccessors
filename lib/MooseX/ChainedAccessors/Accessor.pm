@@ -1,4 +1,5 @@
 package MooseX::ChainedAccessors::Accessor;
+# ABSTRACT: DEPRECATED
 use strict;
 use warnings;
 use base 'Moose::Meta::Method::Accessor';

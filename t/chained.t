@@ -1,10 +1,8 @@
-#!/usr/bin/perl
 use strict;
 use warnings;
+use Test::More;
 
-use Test::More; 
-
-use_ok('Moose::Meta::Attribute::Custom::Trait::Chained');
+use_ok('MooseX::Attribute::Chained');
 use_ok('MooseX::ChainedAccessors::Accessor');
 use_ok('MooseX::Traits::Attribute::Chained');
 

@@ -1,5 +1,5 @@
 package MooseX::ChainedAccessors;
-# ABSTRACT: Accessor class for chained accessors with Moose
+# ABSTRACT: DEPRECATED
 use strict;
 use warnings;
 use Carp qw(confess);
@@ -47,38 +47,7 @@ sub _generate_writer_method_inline {
 
 __END__
 
-=head1 SYNOPSIS
-
-    package Test;
-    use Moose;
-    
-    has => 'debug' => (
-        traits => [ 'Chained' ],
-        is => 'rw',
-        isa => 'Bool',
-    );
-    
-    sub complex_method
-    {
-        my $self = shift;
-        
-        #...
-        
-        print "helper message" if $self->debug;
-        
-        #...
-    }
-    
-    
-    1;
-
-Which allows for:
-
-    my $test = Test->new();
-    $test->debug(1)->complex_method();
-    
 =head1 DESCRIPTION
 
-MooseX::ChainedAccessors is a Moose Trait which allows for method chaining 
-on accessors by returning $self on write/set operations. 
+Deprecated in favor of L<MooseX::Attribute::Chained>.
 
