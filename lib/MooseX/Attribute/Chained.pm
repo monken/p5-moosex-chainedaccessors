@@ -5,6 +5,10 @@ use Moose::Util;
 Moose::Util::meta_attribute_alias(
     Chained => 'MooseX::Traits::Attribute::Chained' );
 
+# Loading this class now prevents it from loading later and emitting a
+# warning.
+use Moose::Meta::Attribute::Custom::Trait::Chained ();
+
 package MooseX::Traits::Attribute::Chained;
 use Moose::Role;
 
